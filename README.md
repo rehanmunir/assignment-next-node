@@ -88,7 +88,7 @@ Product Table (MySQL):
 1. Clone the repository:
 ```bash
 git clone <repository-url>
-cd product-app
+cd assignment-next-node
 ```
 
 2. Build and start all services:
@@ -224,7 +224,7 @@ The frontend will run on http://localhost:3000
 ## Project Structure
 
 ```
-product-app/
+assignment-next-node/
 ├── backend/
 │   ├── src/
 │   │   ├── config/
