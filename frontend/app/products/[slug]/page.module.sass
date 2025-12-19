@@ -1,0 +1,252 @@
+.container
+  max-width: 1200px
+  margin: 0 auto
+  padding: 32px
+  min-height: 100vh
+  background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%)
+
+  @media (max-width: 768px)
+    padding: 24px 20px
+
+.breadcrumb
+  display: flex
+  align-items: center
+  gap: 8px
+  margin-bottom: 32px
+  font-size: 14px
+  color: #6b7280
+  font-weight: 500
+
+  a
+    color: #2563eb
+    text-decoration: none
+    transition: all 0.2s
+
+    &:hover
+      color: #1d4ed8
+      transform: translateX(-2px)
+
+.product
+  display: grid
+  grid-template-columns: 1fr 1fr
+  gap: 60px
+  margin-bottom: 80px
+  background: white
+  padding: 40px
+  border-radius: 24px
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1)
+
+  @media (max-width: 768px)
+    grid-template-columns: 1fr
+    gap: 32px
+    padding: 24px
+
+.imageSection
+  position: sticky
+  top: 32px
+  height: fit-content
+
+.imageContainer
+  position: relative
+  width: 100%
+  padding-top: 100%
+  background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%)
+  border-radius: 20px
+  overflow: hidden
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1)
+  transition: all 0.3s
+
+  &:hover
+    transform: scale(1.02)
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15)
+
+.image
+  object-fit: cover
+
+.details
+  display: flex
+  flex-direction: column
+  gap: 28px
+
+.title
+  font-size: 36px
+  font-weight: 800
+  margin: 0
+  line-height: 1.2
+  color: #111827
+  letter-spacing: -0.5px
+
+  @media (max-width: 640px)
+    font-size: 28px
+
+.price
+  font-size: 42px
+  font-weight: 900
+  background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%)
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+  background-clip: text
+  letter-spacing: -1px
+  margin: 0
+
+  @media (max-width: 640px)
+    font-size: 34px
+
+.availability
+  display: flex
+  align-items: center
+
+.inStock,
+.outOfStock
+  padding: 10px 20px
+  border-radius: 24px
+  font-size: 14px
+  font-weight: 700
+  letter-spacing: 0.5px
+  text-transform: uppercase
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+
+.inStock
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%)
+  color: white
+
+.outOfStock
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%)
+  color: white
+
+.meta
+  border-top: 1px solid #e5e7eb
+  border-bottom: 1px solid #e5e7eb
+  padding: 16px 0
+
+.metaItem
+  display: flex
+  gap: 8px
+
+.metaLabel
+  font-weight: 600
+  color: #374151
+
+.metaValue
+  color: #6b7280
+
+.section
+  margin-top: 8px
+
+.sectionTitle
+  font-size: 20px
+  font-weight: 600
+  margin: 0 0 12px 0
+
+.description
+  font-size: 16px
+  line-height: 1.6
+  color: #4b5563
+  margin: 0
+
+.actions
+  display: flex
+  gap: 16px
+  margin-top: 24px
+  flex-wrap: wrap
+
+  @media (max-width: 640px)
+    flex-direction: column
+
+.updateButton
+  padding: 14px 32px
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%)
+  color: white
+  border: none
+  border-radius: 12px
+  font-size: 15px
+  font-weight: 700
+  cursor: pointer
+  transition: all 0.2s
+  box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2)
+
+  &:hover
+    background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%)
+    transform: translateY(-2px)
+    box-shadow: 0 6px 12px rgba(37, 99, 235, 0.3)
+
+  &:active
+    transform: translateY(0)
+
+.deleteButton
+  padding: 14px 32px
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%)
+  color: white
+  border: none
+  border-radius: 12px
+  font-size: 15px
+  font-weight: 700
+  cursor: pointer
+  transition: all 0.2s
+  box-shadow: 0 4px 6px rgba(239, 68, 68, 0.2)
+
+  &:hover
+    background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%)
+    transform: translateY(-2px)
+    box-shadow: 0 6px 12px rgba(239, 68, 68, 0.3)
+
+  &:active
+    transform: translateY(0)
+
+.related
+  padding-top: 60px
+
+.relatedTitle
+  font-size: 28px
+  font-weight: 800
+  margin: 0 0 32px 0
+  color: #111827
+  letter-spacing: -0.5px
+
+.relatedGrid
+  display: grid
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr))
+  gap: 28px
+
+  @media (max-width: 768px)
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr))
+    gap: 20px
+
+  @media (max-width: 640px)
+    grid-template-columns: 1fr
+
+.loading,
+.error
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  min-height: 60vh
+  text-align: center
+
+  p, h2
+    margin: 0 0 16px 0
+
+  p
+    color: #6b7280
+
+.spinner
+  width: 40px
+  height: 40px
+  border: 4px solid #e5e7eb
+  border-top-color: #2563eb
+  border-radius: 50%
+  animation: spin 1s linear infinite
+  margin-bottom: 16px
+
+@keyframes spin
+  to
+    transform: rotate(360deg)
+
+.backLink
+  color: #2563eb
+  text-decoration: none
+  font-weight: 600
+
+  &:hover
+    text-decoration: underline

@@ -1,0 +1,127 @@
+.container
+  min-height: 100vh
+  display: flex
+  align-items: center
+  justify-content: center
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%)
+  padding: 20px
+
+.loginBox
+  background: white
+  border-radius: 20px
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3)
+  max-width: 450px
+  width: 100%
+  overflow: hidden
+  animation: slideIn 0.4s ease-out
+
+@keyframes slideIn
+  from
+    opacity: 0
+    transform: translateY(-30px)
+  to
+    opacity: 1
+    transform: translateY(0)
+
+.header
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%)
+  padding: 40px 32px
+  text-align: center
+  color: white
+
+.title
+  font-size: 32px
+  font-weight: 800
+  margin: 0 0 8px 0
+  letter-spacing: -0.5px
+
+.subtitle
+  font-size: 16px
+  margin: 0
+  opacity: 0.9
+
+.form
+  padding: 32px
+
+.error
+  background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%)
+  color: #991b1b
+  padding: 12px 16px
+  border-radius: 10px
+  margin-bottom: 20px
+  font-size: 14px
+  font-weight: 600
+  border: 1px solid #fca5a5
+
+.formGroup
+  margin-bottom: 24px
+
+.label
+  display: block
+  font-size: 14px
+  font-weight: 700
+  margin-bottom: 8px
+  color: #374151
+
+.input
+  width: 100%
+  padding: 14px 16px
+  border: 2px solid #e5e7eb
+  border-radius: 12px
+  font-size: 15px
+  transition: all 0.2s
+  background: #f9fafb
+
+  &:focus
+    outline: none
+    border-color: #667eea
+    background: white
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1)
+
+  &::placeholder
+    color: #9ca3af
+
+.submitButton
+  width: 100%
+  padding: 16px
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%)
+  color: white
+  border: none
+  border-radius: 12px
+  font-size: 16px
+  font-weight: 700
+  cursor: pointer
+  transition: all 0.3s
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4)
+
+  &:hover
+    transform: translateY(-2px)
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6)
+
+  &:active
+    transform: translateY(0)
+
+  &:disabled
+    opacity: 0.6
+    cursor: not-allowed
+    transform: none
+
+.defaultCreds
+  margin-top: 24px
+  padding: 16px
+  background: #f9fafb
+  border-radius: 10px
+  border: 1px solid #e5e7eb
+
+  p
+    margin: 4px 0
+    font-size: 13px
+    color: #6b7280
+
+    &:first-child
+      font-weight: 700
+      color: #374151
+      margin-bottom: 8px
+
+    strong
+      color: #111827

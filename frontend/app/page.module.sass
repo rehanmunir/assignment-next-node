@@ -1,0 +1,162 @@
+.container
+  min-height: 100vh
+  background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%)
+
+.header
+  background: rgba(255, 255, 255, 0.95)
+  backdrop-filter: blur(12px)
+  border-bottom: 1px solid rgba(229, 231, 235, 0.8)
+  position: sticky
+  top: 0
+  z-index: 100
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05)
+
+.headerContent
+  max-width: 1400px
+  margin: 0 auto
+  padding: 20px 32px
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+  @media (max-width: 640px)
+    padding: 16px 20px
+
+.logo
+  font-size: 28px
+  font-weight: 800
+  margin: 0
+  background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%)
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+  background-clip: text
+  letter-spacing: -1px
+
+  @media (max-width: 640px)
+    font-size: 22px
+
+.adminLink
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%)
+  color: white
+  padding: 12px 28px
+  border-radius: 12px
+  font-size: 14px
+  font-weight: 700
+  text-decoration: none
+  transition: all 0.2s
+  box-shadow: 0 4px 6px rgba(102, 126, 234, 0.2)
+  display: inline-block
+
+  &:hover
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%)
+    transform: translateY(-2px)
+    box-shadow: 0 6px 12px rgba(102, 126, 234, 0.3)
+
+  &:active
+    transform: translateY(0)
+
+  @media (max-width: 640px)
+    padding: 10px 20px
+    font-size: 13px
+
+.main
+  max-width: 1400px
+  margin: 0 auto
+  padding: 32px
+  display: grid
+  grid-template-columns: 300px 1fr
+  gap: 32px
+  align-items: start
+
+  @media (max-width: 968px)
+    grid-template-columns: 1fr
+    padding: 24px 20px
+
+  @media (max-width: 640px)
+    padding: 20px 16px
+
+.sidebar
+  position: sticky
+  top: 100px
+
+  @media (max-width: 968px)
+    position: static
+
+.content
+  min-height: 500px
+
+.results
+  margin-bottom: 20px
+  padding: 16px 24px
+  background: white
+  border-radius: 12px
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05)
+
+  p
+    color: #374151
+    font-size: 14px
+    font-weight: 600
+    margin: 0
+
+.grid
+  display: grid
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr))
+  gap: 28px
+  animation: fadeInUp 0.4s ease-out
+
+  @media (max-width: 768px)
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr))
+    gap: 20px
+
+  @media (max-width: 640px)
+    grid-template-columns: 1fr
+
+@keyframes fadeInUp
+  from
+    opacity: 0
+    transform: translateY(20px)
+  to
+    opacity: 1
+    transform: translateY(0)
+
+.loading,
+.error,
+.empty
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  padding: 80px 20px
+  text-align: center
+  background: white
+  border-radius: 16px
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05)
+
+  p
+    margin: 0
+    color: #6b7280
+    font-size: 16px
+    font-weight: 500
+
+.spinner
+  width: 50px
+  height: 50px
+  border: 5px solid #e5e7eb
+  border-top-color: #2563eb
+  border-right-color: #2563eb
+  border-radius: 50%
+  animation: spin 0.8s linear infinite
+  margin-bottom: 20px
+
+@keyframes spin
+  to
+    transform: rotate(360deg)
+
+.error
+  p
+    color: #dc2626
+    font-weight: 600
+
+.empty
+  p
+    font-size: 15px
